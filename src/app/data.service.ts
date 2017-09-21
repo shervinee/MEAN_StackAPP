@@ -11,7 +11,7 @@ export class DataService {
 
   getData() {
     return this._http.get("api/users")
-    .map(result => this.result = result.json().data)
+    .map(result => this.result = result.json().data);
   }
 
 }
