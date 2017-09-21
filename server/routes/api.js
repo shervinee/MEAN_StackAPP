@@ -20,6 +20,13 @@ const connect = (closure) => {
     });
 };
 
+// Error handling
+const sendError = (err, res) => {
+    response.status = 501;
+    response.message = typeof err == 'object' ? err.message : err;
+    res.status(501).json(response);
+};
+
 //making response object handling our response 
 let response = {
     status: 200,
