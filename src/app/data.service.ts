@@ -7,6 +7,7 @@ export class DataService {
 
   result: any;
 
+  // dependency injection
   constructor(private _http: Http) { }
 
   getData() {
