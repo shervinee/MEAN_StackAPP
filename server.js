@@ -21,3 +21,11 @@ app.use('/api',api);
 app.get('*',(req,res) => {
     res.sendFile(path.join(__dirname,'dist/index.html'))
 });
+
+//setting the port, creating the server for our app and make it listen
+const port = process.env.PORT || '3000';
+app.set('port',port);
+
+const server = http.createServer(app);
+
+server.listen(port, () => console.log(`Running on localhost: ${port}`));
