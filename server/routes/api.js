@@ -41,3 +41,6 @@ router.get('/users', (req,res) => {
         });
     });
 });
+
+//without this export nothing would work
+module.exports = router;
